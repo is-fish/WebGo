@@ -1,0 +1,71 @@
+body {
+    /*外边距*/
+    margin: 0;
+    /*内边距*/
+    padding: 0;
+    /*弹性布局*/
+    display: flex;
+    /*按弹性主轴居中排列*/
+    justify-content: center;
+    /*按弹性侧轴居中排列*/
+    align-items: center;
+    /*vh视口高度1%*/
+    min-height: 100vh;
+    background: #2196f3;
+}
+.loader{
+    /*相对原位置*/
+    position: relative;
+    /*弹性布局*/
+    display: flex;
+}
+.loader span {
+    width: 50px;
+    height: 300px;
+    margin: 0 20px;
+    background: #2196f3;
+    /*动画名 持续时间 速度曲线 重复次数*/
+    animation: animate 1.4s linear infinite;
+}
+.loader span:nth-child(1){
+    animation-delay: 0s;
+}
+.loader span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.loader span:nth-child(3){
+    animation-delay: 0.4s;
+}
+.loader span:nth-child(4){
+    animation-delay: 0.6s;
+}
+.loader span:nth-child(5){
+    animation-delay: 0.8s;
+}
+.loader span:nth-child(6){
+    animation-delay: 1.0s;
+}
+.loader span:nth-child(7){
+    animation-delay: 1.2s;
+}
+
+@keyframes animate {
+    0%{
+        /*水平阴影位置 垂直阴影位置 模糊距离*/
+        box-shadow: 0 0 0 rgba(0,0,0,.5);
+        /*透明度*/
+        opacity: 0;
+        /*x轴平移 缩放*/
+        transform: translateX(-50px) scale(1);
+    }
+    50%{
+        box-shadow: 0 20px 50px rgba(0,0,0,.5);
+        opacity: 1;
+        transform: translateX(0px) scale(1.2);
+    }
+    100%{
+        box-shadow: 0 0 0 rgba(0,0,0,.5);
+        opacity: 0;
+        transform: translateX(50px) scale(1);
+    }
+}
