@@ -5,3 +5,4 @@ Colorful code.
   - animation使用
   - 弹性布局
 
+- 2021/5/22	更新了轮播字
